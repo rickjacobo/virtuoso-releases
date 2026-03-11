@@ -115,17 +115,13 @@ cp "${BIN_PATH}" "${BIN_PATH}.bak" 2>/dev/null || true
 echo "Deploying..."
 cp "${TMPDIR}/vm" "${BIN_PATH}.new"
 
-if command -v vm-deploy &>/dev/null; then
-    vm-deploy "${BIN_PATH}.new"
+# Use systemd-run to stop service, atomically swap binary, then restart
+systemctl reset-failed vm-lab-upgrade 2>/dev/null || true
+systemd-run --unit=vm-lab-upgrade bash -c "systemctl stop vm-lab && mv ${BIN_PATH}.new ${BIN_PATH} && systemctl start vm-lab"
+echo "Waiting for service to start..."
+sleep 3
+if systemctl is-active --quiet vm-lab; then
+    echo "Upgrade complete. Service is active."
 else
-    # Inline deploy logic
-    systemctl reset-failed vm-lab-upgrade 2>/dev/null || true
-    systemd-run --unit=vm-lab-upgrade bash -c "systemctl stop vm-lab && mv ${BIN_PATH}.new ${BIN_PATH} && systemctl start vm-lab"
-    echo "Waiting for service to start..."
-    sleep 3
-    if systemctl is-active --quiet vm-lab; then
-        echo "Upgrade complete. Service is active."
-    else
-        echo "WARNING: Service may not be running. Check with: systemctl status vm-lab"
-    fi
+    echo "WARNING: Service may not be running. Check with: systemctl status vm-lab"
 fi
