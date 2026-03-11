@@ -108,16 +108,12 @@ fi
 echo "Running smoke test..."
 "${TMPDIR}/vm" version
 
-# Deploy
-echo "Backing up current binary..."
-cp "${BIN_PATH}" "${BIN_PATH}.bak" 2>/dev/null || true
-
+# Deploy — stage new binary, then stop service, backup, swap, restart
 echo "Deploying..."
 cp "${TMPDIR}/vm" "${BIN_PATH}.new"
 
-# Use systemd-run to stop service, atomically swap binary, then restart
 systemctl reset-failed vm-lab-upgrade 2>/dev/null || true
-systemd-run --unit=vm-lab-upgrade bash -c "systemctl stop vm-lab && mv ${BIN_PATH}.new ${BIN_PATH} && systemctl start vm-lab"
+systemd-run --unit=vm-lab-upgrade bash -c "systemctl stop vm-lab && cp ${BIN_PATH} ${BIN_PATH}.bak && mv ${BIN_PATH}.new ${BIN_PATH} && systemctl start vm-lab"
 echo "Waiting for service to start..."
 sleep 3
 if systemctl is-active --quiet vm-lab; then
