@@ -2,7 +2,7 @@
 
 **Your homelab VM manager, simplified.**
 
-virtuOSo is a web-based KVM virtual machine manager for homelabs. Launch Ubuntu, Fedora, and Amazon Linux VMs in seconds, manage them from your browser, and automate with a REST API, Terraform provider, Stacks, and a built-in AI Assistant powered by MCP.
+virtuOSo is a KVM-based homelab appliance delivered as an ISO install. Launch and manage Linux virtual machines from a browser, and connect AI assistants like Claude Code or Codex through a built-in MCP server to automate and control infrastructure.
 
 ## Features
 
