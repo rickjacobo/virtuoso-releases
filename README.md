@@ -19,9 +19,10 @@ virtuOSo is a web-based KVM virtual machine manager for homelabs. Launch Ubuntu,
 
 ## Install
 
-Download the latest ISO from [Releases](https://github.com/rickjacobo/virtuoso-releases/releases), write it to a USB drive, and boot your server:
+[Download the latest ISO](http://releases.rickjacobo.dev/virtuoso.iso), write it to a USB drive, and boot your server:
 
 ```bash
+curl -LO http://releases.rickjacobo.dev/virtuoso.iso
 sudo dd if=virtuoso.iso of=/dev/sdX bs=4M status=progress oflag=sync
 ```
 
