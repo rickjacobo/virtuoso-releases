@@ -4,6 +4,9 @@
 
 virtuOSo is a KVM-based homelab appliance delivered as an ISO install. Launch and manage Linux virtual machines from a browser, and connect AI assistants like Claude Code or Codex through a built-in MCP server to automate and control infrastructure.
 
+**Project Website:**  
+https://rickjacobo.com/virtuoso.html
+
 ## Features
 
 - **Web Dashboard** — Launch, monitor, and manage VMs from any browser
