@@ -1,6 +1,6 @@
 # virtuOSo
 
-**Your homelab VM manager, simplified.**
+**An appliance for running and automating virtual machines in your homelab.**
 
 virtuOSo is a KVM-based homelab appliance delivered as an ISO install. Launch and manage Linux virtual machines from your browser, automate infrastructure through a REST API and Terraform provider, and connect AI assistants like Claude Code or Codex via a built-in MCP server for agent-driven infrastructure management.
 
