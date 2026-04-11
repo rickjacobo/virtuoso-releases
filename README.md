@@ -1,19 +1,22 @@
 # virtuOSo
 
-**An appliance for running and automating virtual machines in your homelab.**
+**A hybrid infrastructure management platform for homelabs and cloud.**
 
-virtuOSo is a KVM-based homelab appliance delivered as an ISO install. Launch and manage Linux virtual machines from your browser, automate infrastructure through a REST API and Terraform provider, and connect AI assistants like Claude Code or Codex via a built-in MCP server for agent-driven infrastructure management.
+virtuOSo manages VMs across on-prem KVM and AWS EC2 from a single dashboard. Launch cloud and local VMs side-by-side, deploy apps from a built-in marketplace, and automate everything through a REST API, Terraform provider, or AI assistant. Ships as a custom Ubuntu ISO for bare metal install, with optional AWS provider for cloud instances.
 
 **Project Website:**  
 https://rickjacobo.com/virtuoso.html
 
 ## Features
 
+- **Hybrid Cloud** — Manage on-prem KVM and AWS EC2 instances from the same UI
 - **Web Dashboard** — Launch, monitor, and manage VMs from any browser
 - **Web Shell & Console** — SSH, serial, and VNC access directly in the browser
-- **Multi-Distro** — Ubuntu, Fedora, and Amazon Linux cloud images
+- **Apps Marketplace** — One-click deployment of Kubernetes, Docker, Gitea, databases, and monitoring stacks
+- **Custom Images** — Boot from cloud images, uploaded ISOs, or QCOW2 disk images (Linux and Windows)
+- **VPN Integration** — Built-in Tailscale support for secure remote access
 - **Stacks** — Deploy multi-VM environments from declarative YAML templates
-- **REST API** — 24+ JSON endpoints for full programmatic control
+- **REST API** — JSON endpoints for full programmatic control
 - **Terraform Provider** — Infrastructure-as-code VM management
 - **AI Assistant** — Built-in Claude integration with MCP tool access
 - **CLI** — Full command-line interface for scripting and automation
@@ -47,5 +50,10 @@ curl -sSL https://raw.githubusercontent.com/rickjacobo/virtuoso-releases/main/up
 
 ## Requirements
 
+**On-prem (ISO install):**
 - x86_64 machine with Intel VT-x or AMD-V (for KVM)
 - 4 GB+ RAM recommended (host + VMs)
+
+**AWS (optional):**
+- AWS account with EC2 and VPC access
+- Credentials configured via Settings page
