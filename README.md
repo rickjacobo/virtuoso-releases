@@ -27,9 +27,11 @@ https://rickjacobo.com/virtuoso.html
 - **Multi-User** — Role-based access control with admin and user roles
 - **Custom ISO** — One-step bare metal install on any x86_64 machine
 
-<a href="https://www.youtube.com/watch?v=dpxVXJt2tAE" target="_blank">
-  <img src="assets/videos/virtuoso-demo-thumbnail.png" alt="Demo" />
-</a>
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=dpxVXJt2tAE">
+    <img src="assets/videos/virtuoso-demo-thumbnail.png" alt="Demo" />
+  </a>
+</p>
 
 ## Install
 
