@@ -2,7 +2,10 @@
 
 **A hybrid infrastructure management platform for homelabs and cloud.**
 
-[![virtuOSo](assets/videos/virtuoso-teaser01-thumbnail.png)](https://youtu.be/AWbEG4mrLws)
+<a href="https://youtu.be/AWbEG4mrLws" target="_blank">
+  <img src="assets/videos/virtuoso-teaser01-thumbnail.png" alt="virtuOSo" />
+</a>
+
 virtuOSo manages VMs across on-prem KVM and AWS EC2 from a single dashboard. Launch cloud and local VMs side-by-side, deploy apps from a built-in marketplace, and automate everything through a REST API, Terraform provider, or AI assistant. Ships as a custom Ubuntu ISO for bare metal install, with optional AWS provider for cloud instances.
 
 **Project Website:**  
@@ -24,8 +27,9 @@ https://rickjacobo.com/virtuoso.html
 - **Multi-User** — Role-based access control with admin and user roles
 - **Custom ISO** — One-step bare metal install on any x86_64 machine
 
-[![Demo](assets/videos/virtuoso-demo-thumbnail.png)](https://www.youtube.com/watch?v=dpxVXJt2tAE)
-
+<a href="https://www.youtube.com/watch?v=dpxVXJt2tAE" target="_blank">
+  <img src="assets/videos/virtuoso-demo-thumbnail.png" alt="Demo" />
+</a>
 
 ## Install
 
